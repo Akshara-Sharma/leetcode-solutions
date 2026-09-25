@@ -1,7 +1,8 @@
-nums = [2, 2, 1, 1, 4]
+class Solution:
+    def singleNumber(self, nums: list[int]) -> int:
+        for num in nums:
+            if (nums.count(num) == 1):
+                return(num)
 
-# traverse the array and print the number whose count == 1
-
-for num in nums:
-    if (nums.count(num) == 1):
-        print(num)
+Output = Solution().singleNumber(nums = [1,1,2,2,3])
+print(Output)

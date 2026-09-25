@@ -1,9 +1,9 @@
-str1 = ["H" , "e" , "l" , "l"]
-str2 = ["l" , "l" , "e" , "H"]
+class Solution:
+    def reverseString(self, s: list[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        s.reverse()
 
-str1.reverse()
-
-if(str2 == str1):
-    print(True)
-else:
-    print(False)
+Output = Solution().reverseString(s = ["h","e","l","l","o"])
+print(Output)
