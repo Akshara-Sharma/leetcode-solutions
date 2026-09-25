@@ -1,10 +1,14 @@
-num = 121
-num1 = num
-reverse = 0
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        original = x
+        reverse = 0
 
-while num > 0:
-    digit = num % 10
-    reverse = reverse * 10 + digit
-    num = num // 10
+        while x > 0:
+            digit = x % 10
+            reverse = reverse * 10 + digit
+            x = x // 10
 
-print(num1 == reverse)
+        return original == reverse
+
+Output = Solution().isPalindrome(x = 121)
+print(Output)

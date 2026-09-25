@@ -1,17 +1,16 @@
-nums = [1, 3, 4]
+class Solution:
+    def searchInsert(self, nums: list[int], target: int) -> int:
+        i = 0
 
-val = 4
-i = 0
+        while i < len(nums):
+            if target == nums[i]:
+                return i
+            elif target < nums[i]:
+                return i
+            else:
+                i += 1
 
-while i < len(nums):
+        return i
 
-    if val == nums[i]:
-        break
-
-    elif val < nums[i]:
-        break
-
-    else:
-        i += 1
-
-print(i)
+Output = Solution().searchInsert(nums = [1,2,3,4], target = 3)
+print(Output)

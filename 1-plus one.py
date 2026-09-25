@@ -1,17 +1,17 @@
-nums = [1,2,3]
+class Solution:
+    def plusOne(self, digits: list[int]) -> list[int]:
+        i = len(digits) - 1
 
-i = len(nums) - 1
+        while i >= 0:
+            if digits[i] == 9:
+                digits[i] = 0
+                i -= 1
+            else:
+                digits[i] += 1
+                return digits
 
-while i >= 0:
-    if nums[i] == 9:
-        nums[i] = 0
-        i -= 1
+        digits.insert(0, 1)
+        return digits
 
-    else:
-        nums[i] += 1
-        break
-
-if i < 0:
-    nums.insert(0, 1)
-
-print(nums)
+Output = Solution().plusOne(digits = [1,2,3])
+print(Output)
