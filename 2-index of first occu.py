@@ -1,4 +1,6 @@
-a = "leetcode"
-b = "leet"
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        return haystack.find(needle)
 
-print(a.find(b))
+Output = Solution().strStr(haystack= "leetcode", needle= "leeto")
+print(Output)

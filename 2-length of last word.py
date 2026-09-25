@@ -1,9 +1,7 @@
-str = "Hello World"
-# len = len(str)
-# print(len)
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        last_word = s.split()[-1]
+        return(len(last_word))
 
-# the last_word should store the last word of the string.
-
-last_word = str.split()[-1]
-# print(last_word)
-print(len(last_word))
+Output = Solution().lengthOfLastWord(s= "Hello World")
+print(Output)

@@ -1,10 +1,15 @@
-num = 16
-remainder = num % 2
-n = num ** (1/2)
+class Solution:
+    def isPowerOfTwo(self, n: int) -> bool:
 
-if (num == 1):
-    print(True)
-elif (remainder == 0):
-    print(True)
-else:
-    print(False)
+        if n <= 0:
+            return False
+
+        while n > 1:
+            if n % 2 != 0:
+                return False
+            n = n // 2
+
+        return True
+
+Output = Solution().isPowerOfTwo(n = 4)
+print(Output)
