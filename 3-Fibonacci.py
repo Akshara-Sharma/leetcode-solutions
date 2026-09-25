@@ -1,8 +1,10 @@
-num= 4
-a = 0
-b = 1
+class Solution:
+    def fib(self, n: int) -> int:
+        a = 0
+        b = 1
+        for i in range(n):
+            a, b = b, a+b
+        return a
 
-for i in range(num):
-    a, b=b, a+b
-
-print(a)
+Output = Solution().fib(n = 3)
+print(Output)

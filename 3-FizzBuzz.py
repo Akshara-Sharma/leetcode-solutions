@@ -1,14 +1,17 @@
-num = 4
-result = []
+class Solution:
+    def fizzBuzz(self, n: int) -> list[str]:
+        results = []
+        for i in range(1, n+1):
+            if(i%15 == 0):
+                results.append("FizzBuzz")
+            elif(i%3 == 0):
+                results.append("Fizz")
+            elif(i%5 == 0):
+                results.append("Buzz")
+            else:
+                results.append(str(i))
+            
+        return(results)
 
-for i in range(1, num + 1):
-
-    if (i % 15 == 0):
-        result.append("FizzBuzz")
-    elif (i % 3 == 0):
-        result.append("Fizz")
-    elif (i % 5 == 0):
-        result.append("Buzz")
-    else:
-        result.append(str(i))
-print(result)
+Output = Solution().fizzBuzz(n= 15)
+print(Output)

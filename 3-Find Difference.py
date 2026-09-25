@@ -1,12 +1,13 @@
-s = "abcd"
-t = "abcde"
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        s = sorted(s)
+        t = sorted(t)
 
-s = sorted(s)
-t = sorted(t)
+        for i in range(len(s)):
+            if s[i] != t[i]:
+                return t[i]
 
-for i in range(len(s)):
-    if s[i] != t[i]:
-        print(t[i])
-        break
-else:
-    print(t[-1])
+        return t[-1]
+
+Output = Solution().findTheDifference(s= "Hell", t= "Hello")
+print(Output)
